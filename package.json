@@ -1,0 +1,173 @@
+{
+  "name": "custom-tool-bar",
+  "main": "./lib/custom-tool-bar",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "custom-tool-bar:toggle"
+  },
+  "repository": "https://github.com/atom/custom-tool-bar",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "consumedServices": {
+  "tool-bar": {
+    "versions": {
+      "^0 || ^1": "consumeToolBar"
+    }
+  }
+},
+  "eslintConfig": {
+    "env": {
+      "commonjs": true,
+      "node": true,
+      "es6": true,
+      "worker": true,
+      "mongo": true,
+      "browser": true
+    },
+    "globals": {
+      "System": true,
+      "DEV_DEBUG_MODE": true,
+      "LOCALCACHE_IDENTIFY": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "rules": {
+      "complexity": [
+        1,
+        8
+      ],
+      "curly": [
+        2,
+        "multi-line"
+      ],
+      "dot-location": [
+        1,
+        "property"
+      ],
+      "dot-notation": 1,
+      "eqeqeq": 1,
+      "guard-for-in": 1,
+      "no-caller": 2,
+      "no-div-regex": 2,
+      "no-else-return": 1,
+      "no-labels": 2,
+      "no-empty-pattern": 2,
+      "no-eq-null": 1,
+      "no-eval": 2,
+      "no-fallthrough": 2,
+      "no-floating-decimal": 2,
+      "no-implied-eval": 2,
+      "no-invalid-this": 2,
+      "no-loop-func": 2,
+      "no-multi-str": 2,
+      "no-native-reassign": 2,
+      "no-octal-escape": 2,
+      "no-octal": 2,
+      "no-process-env": 1,
+      "no-proto": 1,
+      "no-redeclare": 2,
+      "no-script-url": 2,
+      "no-self-compare": 1,
+      "no-unused-expressions": [
+        2,
+        {
+          "allowShortCircuit": true,
+          "allowTernary": true
+        }
+      ],
+      "no-useless-call": 1,
+      "no-useless-concat": 1,
+      "no-void": 2,
+      "no-with": 2,
+      "vars-on-top": 1,
+      "arrow-parens": [
+        2,
+        "as-needed"
+      ],
+      "constructor-super": 1,
+      "no-class-assign": 1,
+      "no-const-assign": 1,
+      "no-dupe-class-members": 1,
+      "no-this-before-super": 2,
+      "no-var": 1,
+      "object-shorthand": 1,
+      "prefer-const": 1,
+      "prefer-spread": 1,
+      "require-yield": 1,
+      "no-undef": 1,
+      "no-undef-init": 1,
+      "no-unused-vars": 1,
+      "no-use-before-define": 2
+    }
+  },
+  "esformatter": {
+    "root": true,
+    "plugins": [
+      "esformatter-braces",
+      "esformatter-quotes",
+      "esformatter-remove-trailing-commas",
+      "esformatter-align",
+      "esformatter-limit-linebreaks",
+      "esformatter-asi",
+      "esformatter-collapse-objects"
+    ],
+    "quotes": {
+      "type": "single"
+    },
+    "indent": {
+      "value": "    "
+    },
+    "whiteSpace": {
+      "before": {
+        "PropertyName": 1
+      }
+    },
+    "lineBreak": {
+      "before": {
+        "ArrayExpressionClosing": 1
+      },
+      "after": {
+        "ArrayExpressionOpening": 1,
+        "ArrayExpressionComma": 1
+      }
+    },
+    "align": {
+      "ObjectExpression": 1,
+      "VariableDeclaration": 1,
+      "AssignmentExpression": 1,
+      "TernaryExpression": 0,
+      "OrExpression": 0,
+      "SpreadAlignment": "key",
+      "ShorthandAlignment": "key"
+    },
+    "collapseObjects": {
+      "ObjectExpression": {
+        "maxLineLength": 120,
+        "maxKeys": 5,
+        "maxDepth": 5,
+        "forbidden": [
+          "FunctionExpression"
+        ]
+      },
+      "ArrayExpression": {
+        "maxLineLength": 120,
+        "maxKeys": 8,
+        "maxDepth": 4,
+        "forbidden": [
+          "FunctionExpression"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "chokidar": "^1.7.0",
+    "lodash": "^4.17.4"
+  }
+}
